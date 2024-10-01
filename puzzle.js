@@ -117,9 +117,7 @@ attachTileEvents();
 // Handle touch start (initiate drag)
 function handleTouchStart(event) {
   event.preventDefault();
-  const draggedIndex = event.target.dataset.index;
-  // Show custom cursor (optional)
-  // ...
+  
 
   const onTouchMove = (moveEvent) => {
     moveEvent.preventDefault();
