@@ -112,3 +112,36 @@ shuffleButton.addEventListener("click", () => {
 // Initialize the puzzle
 initTiles();
 attachTileEvents();
+
+//mobile
+// Handle touch start (initiate drag)
+function handleTouchStart(event) {
+  event.preventDefault();
+  const draggedIndex = event.target.dataset.index;
+  // Show custom cursor (optional)
+  // ...
+
+  const onTouchMove = (moveEvent) => {
+    moveEvent.preventDefault();
+    // Handle dragging logic here
+    // ...
+  };
+  const onTouchEnd = () => {
+    // Handle dropping logic here
+    // ...
+    // Hide custom cursor (optional)
+    // ...
+    document.removeEventListener("touchmove", onTouchMove);
+    document.removeEventListener("touchend", onTouchEnd);
+  };
+
+  document.addEventListener("touchmove", onTouchMove);
+  document.addEventListener("touchend", onTouchEnd);
+}
+
+// Implement touchmove and touchend logic for dragging and dropping tiles
+
+// ... (rest of the code remains the same, using `tiles` and `isSolved`)
+
+// Initialize the puzzle
+initTiles();
