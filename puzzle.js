@@ -113,26 +113,4 @@ shuffleButton.addEventListener("click", () => {
 initTiles();
 attachTileEvents();
 
-//mobile
-// Handle touch start (initiate drag)
-function handleTouchStart(event) {
-  event.preventDefault();
-  
 
-  const onTouchMove = (moveEvent) => {
-    moveEvent.preventDefault();
-    // Handle dragging logic here
-    // ...
-  };
-  const onTouchEnd = () => {
-    // Handle dropping logic here
-    // ...
-    // Hide custom cursor (optional)
-    // ...
-    document.removeEventListener("touchmove", onTouchMove);
-    document.removeEventListener("touchend", onTouchEnd);
-  };
-
-  document.addEventListener("touchmove", onTouchMove);
-  document.addEventListener("touchend", onTouchEnd);
-}
