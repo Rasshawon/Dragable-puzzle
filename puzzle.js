@@ -138,10 +138,3 @@ function handleTouchStart(event) {
   document.addEventListener("touchmove", onTouchMove);
   document.addEventListener("touchend", onTouchEnd);
 }
-
-// Implement touchmove and touchend logic for dragging and dropping tiles
-
-// ... (rest of the code remains the same, using `tiles` and `isSolved`)
-
-// Initialize the puzzle
-initTiles();
